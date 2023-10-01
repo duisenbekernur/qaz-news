@@ -22,47 +22,65 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="navbar">
-        <div class="nav-logo">
-          <a href="./main.html">QazNEWS</a>
-        </div>
-        <div class="nav-menu">
-          <ul>
-            <li class="nav-links"><a href="./main.html">Басты бет</a></li>
-            <li class="nav-links"><a href="./about.html">Сайт туралы</a></li>
-            <li class="nav-links"><a href="./contact.html">Байланысу</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="navbar-custom-container">
+        <a class="navbar-brand text-white" href="./main.html">QazNEWS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto w-100 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./main.html">Басты бет</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./about.html">Сайт туралы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="./contact.html">Байланысу</a>
+            </li>
+            <li class="nav-item" style="margin-left: auto">
+              <a class="nav-link text-light" href="./authorization.html">
+                <button class="btn btn-secondary">Кіру</button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light">
+                <button class="btn btn-primary">Тіркелу</button></a
+              >
+            </li>
           </ul>
-        </div>
-        <div class="nav-btn">
-          <div class="btn-1">
-            <button>
-              <a href="./authorization.html">Кіру</a>
-            </button>
-          </div>
-          <div class="btn-2">
-            <button>Тіркелу</button>
-          </div>
         </div>
       </div>
     </nav>
 
     <div class="content">
-      <div class="categories">
+      <div
+        class="categories d-flex flex-row w-100 align-items-center justify-content-between"
+      >
+        <p></p>
         <p>КОРОНАВИРУС ТУРАЛЫ ЖАҢАЛЫҚТАР</p>
-        <span><a href="./coronavirus.html">толық оқу</a></span>
+        <a href="./coronavirus.html">толық оқу</a>
       </div>
 
       <!--  Last publications  -->
       <div class="last-public">Соңғы жаңалықтар</div>
 
       <!--   Posts   -->
-      <div class="post-container">
+      <div class="d-flex flex-wrap justify-content-between">
         <div class="post">
           <div class="post-img">
             <img src="./img/virus.webp" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Коронавирусқа қарсы "Спутник V" вакцинасын әзірлеуге қатысқан
               қазақ
@@ -78,7 +96,7 @@
           <div class="post-img">
             <img src="./img/nauryz.jpg" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Қазақстанда Наурыз мейрамын неше күн бойы тойлатпақ
             </div>
@@ -93,7 +111,7 @@
           <div class="post-img">
             <img src="./img/weather.jpg" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Ауа райы бұзылады: Синоптиктер елімізде дауылды ескерту жариялады
             </div>
@@ -108,7 +126,7 @@
           <div class="post-img">
             <img src="./img/sorpa.webp" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Күніне неше шыныаяқ кофе ішу керек: Маман кеңес берді
             </div>
@@ -125,12 +143,12 @@
 
       <div class="popular">Танымал жаңалықтар</div>
 
-      <div class="post-container">
+      <div class="d-flex flex-wrap justify-content-between">
         <div class="post">
           <div class="post-img">
             <img src="./img/virus.webp" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Коронавирусқа қарсы "Спутник V" вакцинасын әзірлеуге қатысқан
               қазақ
@@ -144,16 +162,16 @@
         </div>
         <div class="post">
           <div class="post-img">
-            <img src="./img/sorpa.webp" alt="" />
+            <img src="./img/nauryz.jpg" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
-              Күніне неше шыныаяқ кофе ішу керек: Маман кеңес берді
+              Қазақстанда Наурыз мейрамын неше күн бойы тойлатпақ
             </div>
             <div class="post-info">
-              Нурия Дианова мөлшерден көп ішу салдарынан тәуелділік пайда болуы
-              мүмкін екенін айтты. Сондай-ақ жүйке жүйесі біртіндеп жұқарады.
-              Маман кофені тек тамақтан соң ішуге кеңес береді...
+              Талқылауға арналған құжатты Қазақстанның Мәдениет және спорт
+              министрлігі ағымдағы жылдың 9 ақпанында жария етті. Талқылаудың
+              аяқталу күні - 16 ақпан...
             </div>
           </div>
         </div>
@@ -161,7 +179,7 @@
           <div class="post-img">
             <img src="./img/weather.jpg" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
               Ауа райы бұзылады: Синоптиктер елімізде дауылды ескерту жариялады
             </div>
@@ -174,16 +192,16 @@
         </div>
         <div class="post">
           <div class="post-img">
-            <img src="./img/nauryz.jpg" alt="" />
+            <img src="./img/sorpa.webp" alt="" />
           </div>
-          <div class="post-text">
+          <div class="p-1 shadow mb-5 bg-white rounded">
             <div class="post-title">
-              Қазақстанда Наурыз мейрамын неше күн бойы тойлатпақ
+              Күніне неше шыныаяқ кофе ішу керек: Маман кеңес берді
             </div>
             <div class="post-info">
-              Талқылауға арналған құжатты Қазақстанның Мәдениет және спорт
-              министрлігі ағымдағы жылдың 9 ақпанында жария етті. Талқылаудың
-              аяқталу күні - 16 ақпан...
+              Нурия Дианова мөлшерден көп ішу салдарынан тәуелділік пайда болуы
+              мүмкін екенін айтты. Сондай-ақ жүйке жүйесі біртіндеп жұқарады.
+              Маман кофені тек тамақтан соң ішуге кеңес береді...
             </div>
           </div>
         </div>
@@ -191,40 +209,39 @@
     </div>
 
     <!--  Footer  -->
-    <footer>
+    <footer class="bg-dark text-white py-4">
       <div class="footer-content">
-        <div class="footer-menu">
-          <ul>
-            <li><a href="./main.html">Жаңалықтар</a></li>
-            <li><a href="./about.html">Біз туралы</a></li>
-            <li><a href="./contact.html">Байланысу</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <div class="footer-social-title">Біздің әлеуметтік желілер</div>
-          <div class="footer-social-btn">
-            <button>
-              <div class="footer-in-btn">
-                <img src="./img/facebook.png" alt="" />
-                <p><a href="http://facebook.com">Facebook</a></p>
-              </div>
-            </button>
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="./main.html" class="text-white">Жаңалықтар</a></li>
+              <li><a href="./about.html" class="text-white">Біз туралы</a></li>
+              <li><a href="./contact.html" class="text-white">Байланысу</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="footer-tags">
-          <div class="footer-tags-title">Іздеу</div>
-          <div class="footer-tags-list">
-            <div class="footer-tag-btn">
-              <button>желілер</button>
-              <button>онлайн төлемдер</button>
-              <button>қазақстан</button>
-              <button>қазақстан</button>
-              <button>ЗОЖ</button>
-              <button>желілер</button>
-              <button>онлайн төлемдер</button>
-              <button>қазақстан</button>
-              <button>қазақстан</button>
-              <button>ЗОЖ</button>
+          <div class="col-md-4">
+            <h5 class="mb-3">Біздің әлеуметтік желілер</h5>
+            <button class="btn btn-dark btn-sm mb-2">
+              <img src="./img/facebook.png" alt="Facebook Icon" class="mr-2" />
+              <a href="http://facebook.com" class="text-white">Facebook</a>
+            </button>
+            <!-- Add more social buttons here if needed -->
+          </div>
+          <div class="col-md-4">
+            <div class="footer-tags-list">
+              <h5 class="mb-3">Іздеу</h5>
+              <div class="footer-tag-btn">
+                <button>желілер</button>
+                <button>онлайн төлемдер</button>
+                <button>қазақстан</button>
+                <button>қазақстан</button>
+                <button>ЗОЖ</button>
+                <button>желілер</button>
+                <button>онлайн төлемдер</button>
+                <button>қазақстан</button>
+                <button>қазақстан</button>
+                <button>ЗОЖ</button>
+              </div>
             </div>
           </div>
         </div>
