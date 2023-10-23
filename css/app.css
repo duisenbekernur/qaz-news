@@ -530,3 +530,10 @@ td {
   padding: 5px;
   font-size: x-large;
 }
+
+#timer {
+  background-color: darkorange; /* Цвет фона - темно-оранжевый */
+  color: white; /* Цвет текста - белый */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 10px;
+}
