@@ -7,6 +7,7 @@
 
     <!--  Css  -->
     <link rel="stylesheet" href="./css/app.css" />
+    <script src="./js/Valid.js"></script>
 
     <!--  Fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -67,16 +68,23 @@
     </nav>
 
     <div class="form-authorization">
-      <form action="">
+      <form id="loginForm" action="">
         <h1>Кіру</h1>
+        <p id="auth-email" class="error">E-mail немесе Логин керек</p>
         <input
           type="text"
           name="login"
-          id=""
+          id="login"
           placeholder="E-mail немесе Логин"
         />
-        <input type="password" name="password" id="" placeholder="Құпиясөз" />
-        <button>Тіркелу</button>
+        <p id="auth-password" class="error">Құпиясөз керек</p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Құпиясөз"
+        />
+        <button type="submit">Тіркелу</button>
       </form>
     </div>
 
