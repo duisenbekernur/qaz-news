@@ -10,7 +10,6 @@ function deleteAllCookies() {
   }
 }
 
-// Add an event listener to clear cookies when the page is refreshed
 window.addEventListener("load", function () {
   deleteAllCookies();
 });
@@ -19,12 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cookieNotifier = document.getElementById("cookie-notifier");
   const acceptCookieButton = document.getElementById("accept-cookie");
 
-  // Check if the user has already accepted cookies
   if (!localStorage.getItem("cookiesAccepted")) {
     cookieNotifier.style.display = "block";
   }
 
-  // Handle the "Accept" button click
   acceptCookieButton.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "true");
     cookieNotifier.style.display = "none";
