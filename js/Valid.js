@@ -7,18 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
       let isValid = true;
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   
-      // Check if the login (E-mail немесе Логин) field is empty
       if (loginInput.value.trim() === "") {
         document.getElementById("auth-email").innerHTML = "Email енгізілуі керек";
         isValid = false;
       } else if (!emailRegex.test(loginInput.value)) {
-        // Check if the login is not a valid email
         document.getElementById("auth-email").innerHTML =
           "Email болуы керек";
         isValid = false;
       }
   
-      // Check if the password (Құпиясөз) field is empty
       if (passwordInput.value.trim() === '') {
         document.getElementById('auth-password').innerHTML = 'Құпиясөз керек'
         isValid = false;
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isValid = false;
       }
         if (!isValid) {
-          // Prevent form submission if validation fails
           submitButton.style.backgroundColor = "red"; 
           event.preventDefault();
         }
