@@ -8,6 +8,7 @@
     <!--  Css  -->
     <link rel="stylesheet" href="./css/app.css" />
     <script src="./js/Carousel.js" defer></script>
+    <script src="./js/cookie.js"></script>
     <!--  Fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -72,6 +73,10 @@
       </div>
     </nav>
     <div class="fixed-bottom" id="timer">
+      <div id="cookie-notifier" class="cookie-notifier">
+        <p>Бұл веб-сайт біздің веб-сайтта ең жақсы тәжірибе алуыңызды қамтамасыз ету үшін cookie файлдарын пайдаланады</p>
+        <button id="accept-cookie">Келісу</button>
+      </div>
       Сайттағы уақыт: <span id="time">0 секунд</span>
     </div>
     <script src="./js/timer.js" defer></script>
@@ -101,7 +106,7 @@
       </div>
     </section>
     
-
+    
     <!--  Footer  -->
     <footer class="bg-dark text-white py-4">
       <div class="footer-content">

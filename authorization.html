@@ -8,7 +8,7 @@
     <!--  Css  -->
     <link rel="stylesheet" href="./css/app.css" />
     <script src="./js/Valid.js"></script>
-
+    <script src="./js/cookie.js"></script>
     <!--  Fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -24,6 +24,7 @@
     />
   </head>
   <body>
+    
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="navbar-custom-container">
         <a class="navbar-brand text-white" href="./main.html">QazNEWS</a>
@@ -70,25 +71,30 @@
     <div class="form-authorization">
       <form id="loginForm" action="">
         <h1>Кіру</h1>
-        <p id="auth-email" class="error">E-mail немесе Логин керек</p>
+        <p id="auth-email" class="error"></p>
         <input
           type="text"
           name="login"
           id="login"
           placeholder="E-mail немесе Логин"
         />
-        <p id="auth-password" class="error">Құпиясөз керек</p>
+        <p id="auth-password" class="error"></p>
         <input
           type="password"
           name="password"
           id="password"
           placeholder="Құпиясөз"
         />
-        <button type="submit">Тіркелу</button>
+        <button type="submit" id="submitButton">Тіркелу</button>
       </form>
     </div>
 
     <!--  Footer  -->
+    <div id="cookie-notifier" class="cookie-notifier">
+      <p>Бұл веб-сайт біздің веб-сайтта ең жақсы тәжірибе алуыңызды қамтамасыз ету үшін cookie файлдарын пайдаланады</p>
+      <button id="accept-cookie">Келісу</button>
+    </div>
+
     <footer class="bg-dark text-white py-4">
       <div class="footer-content">
         <div class="row">

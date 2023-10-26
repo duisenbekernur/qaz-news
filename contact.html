@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Байланысу</title>
-
+    <script src="./js/cookie.js"></script>
     <!--  Css  -->
     <link rel="stylesheet" href="./css/app.css" />
 
@@ -93,6 +93,10 @@
 
 
         <div class="fixed-bottom" id="timer">
+          <div id="cookie-notifier" class="cookie-notifier">
+            <p>Бұл веб-сайт біздің веб-сайтта ең жақсы тәжірибе алуыңызды қамтамасыз ету үшін cookie файлдарын пайдаланады</p>
+            <button id="accept-cookie">Келісу</button>
+          </div>
           Сайттағы уақыт: <span id="time">0 секунд</span>
         </div>
       
@@ -100,7 +104,7 @@
       </div>
     </div>
     
-
+    
     <!--  Footer  -->
     <footer class="bg-dark text-white py-4">
       <div class="footer-content">
