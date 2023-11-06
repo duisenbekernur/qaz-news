@@ -1,6 +1,34 @@
+// LOGIN
+localStorage.setItem("isAdminLogged", false);
+
+const handleAdminLogin = (e) => {
+  e.preventDefault();
+
+  const login = document.getElementById("login").value;
+  const password = document.getElementById("password").value;
+
+  console.log(login, password);
+
+  if (!(login === "@dmin" && password === "q@znews")) {
+    document.getElementById("login").value = "";
+    document.getElementById("password").value = "";
+
+    alert("Неправильные данные");
+    return;
+  }
+
+  localStorage.setItem("isAdminLogged", true);
+  window.location.pathname = "/admin/news.html";
+};
+
+document.getElementById("loginForm") &&
+  document
+    .getElementById("loginForm")
+    .addEventListener("submit", handleAdminLogin);
+
 // NEWS
 const postsContainer = document.getElementById("posts-container");
-const removePost = document.getElementByClassName("remove-post");
+const removePost = document.querySelector(".remove-post");
 
 removePost &&
   removePost.addEventListener("click", (e) => {
@@ -15,6 +43,8 @@ let postContents =
 if (window.location.pathname.includes("admin")) {
   postContents = postContents.map((c) => ({ ...c, imgUrl: "." + c.imgUrl }));
 }
+
+console.log(postContents);
 
 postContents.forEach((content) => {
   const newPost = `
@@ -32,28 +62,3 @@ postContents.forEach((content) => {
   if (postsContainer)
     postsContainer.innerHTML = postsContainer.innerHTML + newPost;
 });
-
-// LOGIN
-localStorage.setItem("isAdminLogged", false);
-
-const handleAdminLogin = (e) => {
-  e.preventDefault();
-
-  const login = document.getElementById("login").value;
-  const password = document.getElementById("password").value;
-
-  if (!(login === "@dmin" && password === "q@znews")) {
-    document.getElementById("login").value = "";
-    document.getElementById("password").value = "";
-
-    alert("Неправильные данные");
-    return;
-  }
-
-  localStorage.setItem("isAdminLogged", true);
-  window.location.pathname = "/admin/news.html";
-};
-
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", handleAdminLogin);
