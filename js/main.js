@@ -31,11 +31,34 @@ postContents.forEach(content => {
             <div class="post-info">
             ${content.info}
             </div>
+            <button class="add-to-favorites" data-title="${content.title}">Add to Favorites</button>
           </div>
-        </div>`
-    postsContainer.innerHTML = postsContainer.innerHTML + newPost
-    popularNews.innerHTML = popularNews.innerHTML + newPost
-})
+        </div>`;
+
+    postsContainer.innerHTML = postsContainer.innerHTML + newPost;
+    popularNews.innerHTML = popularNews.innerHTML + newPost;
+});
+
+// Get all the "Add to Favorites" buttons
+const addToFavoritesButtons = document.querySelectorAll('.add-to-favorites');
+
+// Function to add a post to favorites
+function addToFavorites(title) {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.includes(title)) {
+        favorites.push(title);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+}
+
+// Add a click event listener to each "Add to Favorites" button
+addToFavoritesButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const postTitle = this.getAttribute('data-title');
+        addToFavorites(postTitle);
+        alert(`${postTitle} has been added to your favorites!`);
+    });
+});
 
 
 const greet = () => {
