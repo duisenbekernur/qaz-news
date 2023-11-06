@@ -598,3 +598,7 @@ td {
   text-align: center;
   text-decoration: none;
 }
+
+.add-to-favorites {
+  border: none;
+}
