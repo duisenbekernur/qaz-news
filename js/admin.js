@@ -44,13 +44,11 @@ if (window.location.pathname.includes("admin")) {
   postContents = postContents.map((c) => ({ ...c, imgUrl: "." + c.imgUrl }));
 }
 
-console.log(postContents);
-
 postContents.forEach((content) => {
   const newPost = `
   <div class="card" style="width: 18rem">
     <img src="${content.imgUrl}" class="card-img-top" alt="..." />
-    <div class="remove-post">X</div>
+    <div id="remove-post-${content.id}" class="remove-post">X</div>
     <div class="card-body">
       <h5 class="card-title">${content.title}</h5>
       <p class="card-text">
@@ -61,4 +59,14 @@ postContents.forEach((content) => {
   </div>`;
   if (postsContainer)
     postsContainer.innerHTML = postsContainer.innerHTML + newPost;
+});
+
+postContents.forEach((c) => {
+  document
+    .getElementById(`remove-post-${c.id}`)
+    .addEventListener("click", () => {
+      let posts = JSON.parse(localStorage.getItem("posts"));
+      posts = posts.filter((p) => p.id !== c.id);
+      localStorage.setItem("posts", JSON.stringify(posts));
+    });
 });
