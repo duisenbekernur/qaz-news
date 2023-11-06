@@ -1,0 +1,23 @@
+.admin-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: aliceblue;
+  font-weight: medium;
+  font-size: 25px;
+}
+
+.remove-post {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background: wheat;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@
 body {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
@@ -161,6 +162,9 @@ nav {
 }
 .post:hover img {
   opacity: 0.5;
+}
+.post-img {
+  position: relative;
 }
 .post-img img {
   width: 255px;
@@ -346,14 +350,12 @@ footer {
   gap: 10px;
 }
 .form-authorization {
-  margin: 75px auto 200px auto;
-  width: 1110px;
+  /* margin: 75px auto 200px auto; */
+  width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  min-height: 100vh;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  align-items: center;
   justify-content: center;
 }
 form {
@@ -494,17 +496,17 @@ td {
   font-size: 4rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  border-radius: .25rem;
-  padding: 0 .5rem;
-  background-color: rgba(0, 0, 0, .1);
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
   color: white;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button:focus {
@@ -532,16 +534,15 @@ td {
 }
 
 #timer {
-  background-color: darkorange; 
-  color: white; 
-  text-align: center; 
+  background-color: darkorange;
+  color: white;
+  text-align: center;
   padding: 10px;
 }
 
 .error {
   color: red;
 }
-
 
 .cookie-notifier {
   position: fixed;
@@ -556,7 +557,7 @@ td {
 }
 
 #accept-cookie {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -566,7 +567,6 @@ td {
   font-size: 16px;
   cursor: pointer;
 }
-
 
 .modal-overlay {
   display: none;
@@ -591,9 +591,10 @@ td {
 }
 
 #close-modal {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 5px 10px;
   text-align: center;
-  text-decoration: none
+  text-decoration: none;
+}
