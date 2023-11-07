@@ -150,9 +150,11 @@ nav {
   column-gap: 30px;
   margin-bottom: 20px;
   row-gap: 30px;
+  flex-wrap: wrap;
 }
 .post {
   width: 250px;
+  height: 500px;
   border-radius: 5px;
   overflow: hidden;
   -webkit-transition: 1s;
@@ -193,6 +195,9 @@ nav {
   line-height: 15px;
   color: #8b8b8b;
   margin-bottom: 22px;
+}
+.post-info__date {
+  margin: 0 0 15px 0;
 }
 .popular {
   margin-top: -22px;

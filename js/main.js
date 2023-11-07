@@ -53,13 +53,16 @@ postContents.forEach((content) => {
           <div class="post-img">
             <img src="${content.imgUrl}" alt="" />
           </div>
-          <div class="p-1 shadow mb-5 bg-white rounded">
+          <div class="p-1 shadow mb-5 bg-white rounded h-75">
             <div class="post-title"><a class="text-decoration-none text-black" href="${content.postUrl}">
             ${content.title}
             </a>
             </div>
             <div class="post-info">
             ${content.info}
+            </div>
+            <div class="post-info__date">
+            ${new Date(content.date).toLocaleDateString()}
             </div>
             <button id="add-to-favorites-${content.id}" class="add-to-favorites">
                 ${favoriteImage.outerHTML}

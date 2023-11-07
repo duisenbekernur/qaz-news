@@ -48,7 +48,7 @@ function displayPosts() {
 
   posts.forEach((content) => {
     const newPost = `
-  <div class="card" style="width: 18rem">
+  <div class="card" style="width: 15rem">
     <img src="${content.imgUrl}" class="card-img-top" alt="..." />
     <div id="remove-post-${content.id}" class="remove-post">X</div>
     <div class="card-body">
@@ -56,7 +56,6 @@ function displayPosts() {
       <p class="card-text">
       ${content.info}
       </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>`;
     if (postsContainer)
@@ -108,9 +107,7 @@ document.getElementById("openModal").addEventListener("click", function () {
     const title = document.getElementById("titleInput").value;
     const description = document.getElementById("descriptionInput").value;
     const image = document.getElementById("imagePreview").name;
-
-    // You can now submit this data to your server or perform other actions.
-    // For this example, we'll just log the data.
+    
     console.log("Title:", title);
     console.log("Description:", description);
     console.log("Image:", image);
@@ -121,6 +118,8 @@ document.getElementById("openModal").addEventListener("click", function () {
       title,
       info: description,
       imgUrl: image,
+      date: new Date(),
+      postUrl: "detailNewsPage.html",
     });
     localStorage.setItem("posts", JSON.stringify(posts));
 
