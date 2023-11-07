@@ -1,7 +1,7 @@
 const postsContainer = document.getElementById("posts-container");
 const popularNews = document.getElementById("popular-news");
 
-const postContents = [
+const postContents = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 1,
     title:
@@ -28,6 +28,8 @@ const postContents = [
     info: "Нурия Дианова мөлшерден көп ішу салдарынан тәуелділік пайда болуы мүмкін екенін айтты. Сондай-ақ жүйке жүйесі біртіндеп жұқарады. Маман кофені тек тамақтан соң ішуге кеңес береді...",
   },
 ];
+
+localStorage.setItem("posts", JSON.stringify(postContents));
 
 postContents.forEach((content) => {
   const favoriteIds = JSON.parse(localStorage.getItem("favoriteIds")) || [];

@@ -29,11 +29,29 @@
       <div class="last-public">Барлық жаңалықтар</div>
 
       <!--   Posts   -->
-      <div
-        id="posts-container"
-        class="post-container"
-      >
+      <div id="posts-container" class="post-container">
         <!--        coming from JS-->
+      </div>
+    </div>
+
+    <div id="openModal">
+      <button>Жаңалық қосу</button>
+    </div>
+    <div id="modal" class="modal">
+      <div class="admin-modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Жаңалық қосу</h2>
+        <form id="itemForm">
+          <input type="text" id="titleInput" placeholder="Аты" required />
+          <textarea
+            id="descriptionInput"
+            placeholder="Мәтін"
+            required
+          ></textarea>
+          <input type="file" id="imageInput" />
+          <img id="imagePreview" src="" alt="Сурет" />
+          <button type="submit">Қосу</button>
+        </form>
       </div>
     </div>
 

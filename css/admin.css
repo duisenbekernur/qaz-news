@@ -21,3 +21,80 @@
   align-items: center;
   cursor: pointer;
 }
+
+.modal {
+  display: none;
+  position: relative;
+  /* top: 0; */
+  left: 50%;
+  right: 50%;
+  /* width: 600px; */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-modal-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-top: 150px;
+  margin-right: auto;
+  width: 100px; /* Need a specific value to work */
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#itemForm {
+  margin: 0;
+}
+
+#imagePreview {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 10px 0;
+}
+
+button,
+input,
+textarea {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#openModal {
+    width: 200px;
+    margin: 0 auto;
+}
+
+#openModal button {
+    border-radius: 5px;
+}
