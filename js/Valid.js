@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('auth-password').innerHTML = 'Құпиясөз керек'
         isValid = false;
       } else if (passwordInput.value.trim().length < 8) {
-        document.getElementById("auth-password-len").innerHTML = "Құпиясөз әлсіз! (кем дегенде 8 символдан тұруы қажет)";
+        document.getElementById("auth-password").innerHTML = "Құпиясөз әлсіз! (кем дегенде 8 символдан тұруы қажет)";
         isValid = false;
       }
         if (!isValid) {

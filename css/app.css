@@ -640,3 +640,12 @@ td {
 .filter-section input[type="date"] {
   background-color: #fff;
 }
+
+.add-to-favorites {
+  border: none;
+}
+
+
+.bg-main{
+  background-color: #ef7733;
+}
