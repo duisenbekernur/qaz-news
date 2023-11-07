@@ -65,10 +65,42 @@
                     </a
                     >
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light">
+                        <button id="filter-button" class="btn btn-primary">Фильтр</button>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+<div id="filter-menu" class="filter-section" style="display: none;">
+    <label for="category-filter">Тематика:</label>
+    <select id="category-filter">
+        <option value="all">Барлық жаңалықтар</option>
+        <option value="politics">Политика</option>
+        <option value="sports">Спорт</option>
+        <option value="entertainment">Білім</option>
+        <option value="c">Өнертабыстар</option>
+    </select>
+
+    <label for="date-filter">Қай күнгі жаңалықтар:</label>
+    <input type="date" id="date-filter">
+
+    <label for="country-filter">Елдер:</label>
+    <select id="country-filter">
+        <option value="all">Барлық әлем</option>
+        <option value="kazakhstan">Қазақстан</option>
+        <option value="russia">Ресей</option>
+        <option value="usa">АҚШ</option>
+        <option value="ukrain">Украина</option>
+        <option value="Pakestine">Палестина</option>
+    </select>
+    <button id="apply-filter-button">Көрсету</button>
+</div>
+<script src="./js/filter.js" type="text/javascript"></script>
+</body>
+</html>
 
 <div class="content">
     <div

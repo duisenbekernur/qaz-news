@@ -598,3 +598,45 @@ td {
   text-align: center;
   text-decoration: none;
 }
+
+
+#filter-menu {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+
+#filter-menu {
+  display: none; 
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+.filter-section label {
+  margin-right: 10px;
+}
+
+.filter-section select,
+.filter-section input {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.filter-section select {
+  background-color: #fff;
+}
+
+.filter-section input[type="date"] {
+  background-color: #fff;
+}
