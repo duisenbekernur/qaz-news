@@ -10,12 +10,15 @@ filterButton.addEventListener("click", function () {
 });
 
 function applyFilters() {
+  console.log("applying filters");
   const selectedCategory = document.getElementById("category-filter").value;
   const selectedDate = document.getElementById("date-filter").value;
   const selectedCountry = document.getElementById("country-filter").value;
 
   const filters = {
     selectedDate: new Date(selectedDate),
+    selectedCategory,
+    selectedCountry,
   };
   localStorage.setItem("filters", JSON.stringify(filters));
 }

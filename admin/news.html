@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="kk">
   <head>
     <meta charset="UTF-8" />
@@ -48,6 +48,27 @@
             placeholder="Мәтін"
             required
           ></textarea>
+          <div style="margin: 15px 0">
+            <label for="post-category">Тематика:</label>
+            <select id="post-category">
+              <option value="all">Барлық жаңалықтар</option>
+              <option value="politics">Политика</option>
+              <option value="sports">Спорт</option>
+              <option value="entertainment">Білім</option>
+              <option value="c">Өнертабыстар</option>
+            </select>
+          </div>
+          <div style="margin: 15px 0">
+            <label for="post-country">Елдер:</label>
+            <select id="post-country">
+              <option value="all">Барлық әлем</option>
+              <option value="kazakhstan">Қазақстан</option>
+              <option value="russia">Ресей</option>
+              <option value="usa">АҚШ</option>
+              <option value="ukrain">Украина</option>
+              <option value="Pakestine">Палестина</option>
+            </select>
+          </div>
           <input type="file" id="imageInput" />
           <img id="imagePreview" src="" alt="Сурет" />
           <button type="submit">Қосу</button>

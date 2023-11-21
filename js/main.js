@@ -6,17 +6,38 @@ const filters = JSON.parse(localStorage.getItem("filters"));
 const postContents = JSON.parse(localStorage.getItem("posts")) || [];
 // localStorage.setItem("posts", JSON.stringify(postContents));
 
+const countries = {
+  all: "Барлығы",
+  kazakhstan: "Қазақстан",
+  russia: "Ресей",
+  usa: "АҚШ",
+  ukrain: "Украина",
+  Pakestine: "Палестина",
+};
+const categories = {
+  all: "Барлық жаңалықтар",
+  politics: "Политика",
+  sports: "Спорт",
+  entertainment: "Білім",
+  c: "Өнертабыстар",
+};
+
 console.log(
-  "f",
   new Date(postContents[0].date).toLocaleDateString() ===
-    new Date(filters.selectedDate).toLocaleDateString
+    new Date(filters.selectedDate).toLocaleDateString,
 );
 postContents
   .filter((post) => {
     return (
-      new Date(post.date).toLocaleDateString() ===
+      (new Date(post.date).toLocaleDateString() ===
         new Date(filters.selectedDate).toLocaleDateString() ||
-      !filters.selectedDate
+        !filters.selectedDate) &&
+      (filters.selectedCountry === post.country ||
+        !filters.selectedCountry ||
+        filters.selectedCountry === "all") &&
+      (filters.selectedCategory === post.category ||
+        !filters.selectedCategory ||
+        filters.selectedCategory === "all")
     );
   })
   .forEach((content) => {
@@ -47,6 +68,12 @@ postContents
             <div class="post-info">
             ${content.info}
             </div>
+            <strong>
+            ${countries[content.country]}
+            </strong>
+            <i>
+            ${categories[content.category]}
+            </i>
             <div class="post-info__date">
             ${new Date(content.date).toLocaleDateString()}
             </div>
@@ -64,7 +91,7 @@ postContents
 
     // Add an event listener to the "Add to Favorites" button
     const addToFavoritesButton = postElement.querySelector(
-      `#add-to-favorites-${content.id}`
+      `#add-to-favorites-${content.id}`,
     );
     addToFavoritesButton.addEventListener("click", () => {
       if (isFavorite) {

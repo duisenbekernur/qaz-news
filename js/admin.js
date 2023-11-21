@@ -107,10 +107,14 @@ document.getElementById("openModal").addEventListener("click", function () {
     const title = document.getElementById("titleInput").value;
     const description = document.getElementById("descriptionInput").value;
     const image = document.getElementById("imagePreview").name;
-    
+    const category = document.getElementById("post-category").value;
+    const country = document.getElementById("post-country").value;
+
     console.log("Title:", title);
     console.log("Description:", description);
     console.log("Image:", image);
+    console.log("Category:", category);
+    console.log("Country:", country);
 
     let posts = JSON.parse(localStorage.getItem("posts"));
     posts.push({
@@ -119,6 +123,8 @@ document.getElementById("openModal").addEventListener("click", function () {
       info: description,
       imgUrl: image,
       date: new Date(),
+      category: category,
+      country: country,
       postUrl: "detailNewsPage.html",
     });
     localStorage.setItem("posts", JSON.stringify(posts));
