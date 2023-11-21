@@ -1,7 +1,7 @@
-const id = window.location.search.split("=")[1];
+const postId = window.location.search.split("=")[1];
 
 const post = JSON.parse(localStorage.getItem("posts")).find(
-  (p) => p.id === +id
+  (p) => p.id === +postId
 );
 console.log(post);
 
